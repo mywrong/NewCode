@@ -1,6 +1,6 @@
-package org.NewCode.BinaryTree;
+package org.newcode.binarytree;
 
-import org.NewCode.common.TreeNode;
+import org.newcode.common.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

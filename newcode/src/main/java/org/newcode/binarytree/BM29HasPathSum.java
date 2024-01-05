@@ -1,6 +1,6 @@
-package org.NewCode.BinaryTree;
+package org.newcode.binarytree;
 
-import org.NewCode.common.TreeNode;
+import org.newcode.common.TreeNode;
 
 /**
  * @program: <a href="https://www.nowcoder.com/practice/508378c0823c423baa723ce448cbfd0c?tpId=295&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Fcompany">...</a>

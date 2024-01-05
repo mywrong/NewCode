@@ -1,4 +1,4 @@
-package org.NewCode.common;
+package org.newcode.common;
 
 
 public class TreeNode {

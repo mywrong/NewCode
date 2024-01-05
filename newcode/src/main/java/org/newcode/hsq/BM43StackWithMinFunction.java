@@ -1,5 +1,8 @@
 package org.newcode.hsq;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -11,14 +14,16 @@ import java.util.Stack;
  * pop():弹出栈顶元素
  * top():获取栈顶元素
  * min():获取栈中最小元素
+ *
+ * 思路：在入栈时，将当前元素与栈顶元素的最小值一起入栈，这样栈顶元素就是当前栈中的最小值
  */
 public class BM43StackWithMinFunction {
 
-    private int min = Integer.MAX_VALUE;
-    private Stack<Integer> stack = new Stack<Integer>();
+    private final Stack<List<Integer>> stack = new Stack<>();
+
     public void push(int node) {
-        stack.push(node);
-        min = Math.min(node,min);
+        int min = stack.isEmpty() ? node : Math.min(stack.peek().get(1), node);
+        stack.push(new ArrayList<>(Arrays.asList(node, min)));
     }
 
     public void pop() {
@@ -26,10 +31,10 @@ public class BM43StackWithMinFunction {
     }
 
     public int top() {
-        return min;
+        return stack.peek().get(0);
     }
 
     public int min() {
-
+        return stack.peek().get(1);
     }
 }
